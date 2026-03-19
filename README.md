@@ -1,7 +1,8 @@
 # Pytorch BERT Benchmark Results
 
-
 **NOTE** The code that runs this benchmark is old and does not actually produce anything but heat.
+
+<a href="BERT.md">Benchmark</a>
 
 Batch Size 5, 1 Epoch, 10 Iterations Mixed Precision, All ran in Windows 11 with AMP unless specified. Lower elapsed time is faster.
 
