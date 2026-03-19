@@ -1,2 +1,182 @@
-# pytorch-bert-benchmark
-Pytorch heat generator that tests basic bert training loads against GPUs
+# Pytorch BERT Benchmark Results
+
+### <a href="/benchmark/pytorch-bert-benchmark/BERT.md">BERT Benchmark</a>
+
+**NOTE** The code that runs this benchmark is old and does not actually produce anything but heat.
+
+Batch Size 5, 1 Epoch, 10 Iterations Mixed Precision, All ran in Windows 11 with AMP unless specified. Lower elapsed time is faster.
+
+- S Tier "The Fastest"
+  - AMD Instinct Mi325X VF 288GB - Ubuntu 24.04 ROCm 6.4.1
+    - Elapsed time: 27.13 seconds
+  - Radeon AI Pro R9700 32GB x 2 - Torch DDP / RCCL Backend - Ubuntu 24.04 - ROCm 7.2 Native
+    - Elapsed time: 39.10 seconds
+  - RTX 5080 - Stock PNY OC
+    - Elapsed time: 43.79 seconds
+  - RTX 5080 - Stock ASUS Astral
+    - Elapsed time: 44.83 seconds
+  - RTX 5070 Ti - UV/OC 3.2ghz 990mv +1500mhz mem
+    - Elapsed time: 50.52 seconds
+  - RTX 5070 Ti - +1500mhz mem
+    - Elapsed time: 53.45 seconds
+  - Google Colab A100
+    - Elapsed time: 55.05 seconds
+  - RTX 3090 Ti Founders Edition 24GB - Ubuntu 24.04 LTS
+    - Elapsed time: 55.48 seconds
+  - RX 7900 XTX Sapphire Pulse - Ubuntu 24.04 LTS PyTorch 2.6 ROCm 6.4.2
+    - Elapsed time: 57.62 seconds
+  - RX 7900 XTX Asrock Taichi - Ubuntu 24.04 LTS PyTorch 2.6 ROCm 6.4.2
+  	- Elapsed time: 58.13 seconds
+  - Arc B580 12GB - Ubuntu 25.04 - Intel XPU IPEX Docker Container - 2.8.10-xpu
+    - Elapsed time: 58.34 seconds
+  - RX 7900 XTX Asrock Taichi - Ubuntu 24.04 LTS PyTorch 2.8 ROCm 6.4.4
+    - Elapsed time: 58.86 seconds
+  - Arc B580 12GB - Ubuntu 24.04 - Intel XPU IPEX Docker Container - 2.8.10-xpu
+    - Elapsed time: 58.97 seconds
+  - Arc B580 12GB - OneAPI 2025.2.1 - Pytorch 2.8 with IPEX optimization
+    - Elapsed time: 59.56 seconds
+  - RX 9070 XT Asrock Taichi - Ubuntu 24.04 LTS PyTorch 2.8 ROCm 7.0.2
+  	- Elapsed time: 59.75 seconds
+  - RX 7900 XTX Asrock Creator - Ubuntu 24.04 LTS PyTorch 2.6 ROCm 6.4.2
+    - Elapsed time: 59.95 seconds
+- A Tier "Top Tier Home Lab Performance"
+  - Arc B580 12GB - Ubuntu 25.04 - Intel XPU IPEX Docker Container - 2.8.10-xpu
+    - Elapsed time: 60.75 seconds
+  - Arc Pro B60 24GB ASRock Creator - OneAPI 2025.3.1 - Pytorch 2.8 with IPEX optimization
+    - Elapsed time: 61.94 seconds
+  - RTX 5070 12GB PNY Base Model
+    - Elapsed time: 62.15 seconds
+  - Radeon AI Pro R9700 32GB - Ubuntu 24.04 - ROCm 7.2 Native
+    - Elapsed time: 62.39 seconds
+  - Arc B580 12GB - OneAPI 2025.1.0 - Pytorch 2.8 with IPEX optimization
+    - Elapsed time: 65.74 seconds
+  - Arc B580 12GB - Garuda 6.18.1 zen - Intel XPU IPEX Docker Container - 2.8.10-xpu - Oculink pcie 4.0 x4
+    - Elapsed time: 67.13 seconds
+  - Arc Pro B60 24GB ASRock Creator - Ubuntu 24.04 - Intel XPU IPEX Docker Container - 2.8.10-xpu - Clock limited to 2400mhz
+    - Elapsed time: 67.16 seconds
+  - RTX 3090 Ti Founders Edition 24GB - 2100mhz@0.985v +1400 mem
+    - Elapsed time: 67.59 seconds
+  - RTX 3090 Ti Founders Edition 24GB - 2070mhz@0.960v +1000 mem
+    - Elapsed time: 68.51 seconds
+  - AMD Instinct MI300X 192GB - Ubuntu 24.04 ROCm 6.4.1
+    - Elapsed time: 68.87 seconds
+  - RTX 3090 Ti Founders Edition 24GB - Factory Settings
+    - Elapsed time: 69.82 seconds
+  - Arc B580 12GB - OneAPI 2025.1.0 - Pytorch 2.7 with IPEX optimization (Working)
+    - Elapsed time: 69.98 seconds
+  - RTX 3090 Ti Founders Edition 24GB - 1770mhz@0.825v +1000 mem
+    - Elapsed time: 71.67 seconds
+  - RTX 3090 Ti Founders Edition 24GB - 1725mhz@0.825v +1400 mem
+    - Elapsed time: 72.56 seconds
+  - RTX 3090 Ti Founders Edition 24GB - 1725mhz@0.825v +400 mem
+    - Elapsed time: 73.97 seconds
+  - Titan V - Ubuntu 24.04 LTS
+    - Elapsed time: 74.35 seconds
+  - RX 7900 XTX Asrock Taichi - Preview Driver 25.20.01.14 Pytorch 2.8 in Windows 11
+    - Elapsed time: 75.50 seconds
+  - RTX 3080 Founders Edition 10GB
+    - Elapsed time: 75.68
+  - Arc B580 12GB - OneAPI 2025.1.0 - Pytorch 2.7 with IPEX optimization (Semi-Working)
+    - Elapsed time: 80.67 seconds
+  - RX 9070 XT Ubuntu 24.04 - ROCm 6.4.3
+  	- Elapsed time: 81.13 seconds
+  - RX 9070 XT WSL2 Ubuntu 22.04 LTS - +250 core max - 110% power 340w - +200mhz vram
+    - Elapsed time: 83.16 seconds
+  - Titan V
+    - Elapsed time: 83.19 seconds
+  - RTX 4070 Super 12GB
+    - Elapsed time: 83.88 seconds
+  - RX 9070 XT Ubuntu 24.04 - ROCm 6.4.1 - Official Support
+    - Elapsed time: 84.39 seconds
+  - RTX 4000 Ada Generation - Full size 130w - Windows 11 - Quadro Drivers
+    - Elapsed time: 85.65 seconds
+  - RX 9070 XT WSL2 Ubuntu 22.04 LTS - ROCm 6.4.1 Windows 11 25.6.1 Drivers - Official Support
+    - Elapsed time: 88.24 seconds
+  - RX 9070 XT Ubuntu 24.04 LTS - 25.6.1 Drivers - Official Support
+    - Elapsed time: 88.24 seconds **Yes the same exact time as WSL2 22.04 LTS**
+  - RTX 2080 Ti HP Blower - 1816mhz@0.850v - 155w underload
+    - Elapsed time: 89.58 seconds
+  - Arc Pro B50 16GB - Ubuntu 24.04 - Intel XPU IPEX Docker Container - 2.8.10-xpu
+    - Elapsed time: 91.51 seconds
+  - Arc Pro B50 16GB - Weird launch software/driver and fan issues
+    - Elapsed time: 94.30 seconds
+  - Arc Pro B50 16GB - 2 months post launch 32.0.101.6979 pro drivers - Fans work fine now (silent)
+    - Elapsed time: 95.49 seconds
+  - RTX 5060 Ti 16GB - PNY OC NOTE: Running on PCIe 3.0
+    - Elapsed time: 97.14 seconds
+  - RTX 3090 Ti Founders Edition 24GB - 1560mhz@0.800v +800 mem
+    - Elapsed time: 97.39 seconds
+  - RX 9070 XT Ubuntu 24.10 - ROCm 6.3.4 Bare Metal - No official support
+    - Elapsed time: 99.22 seconds
+  - RTX 2080 Ti MSI Trio X 1025mv at 1995mhz +250 vram
+    - Elapsed time: 99.38 seconds
+- B Tier "Good Performance"
+  - Arc B580 12GB - +10% voltage - 120% power limit - +250mhz - Mem +20Gbps - 105w @ 3150mhz
+    - Elapsed time: 108.92 seconds
+  - RTX 5060 Mobile 8GB (Laptop GPU)
+    - Elapsed time: 109.26 seconds
+  - Google Colab L4
+    - Elapsed time: 109.60 seconds
+  - Arc B580 12GB - Stock - OneAPI 2025.1.0 - New 32.0.101.6732 Driver with OneAPI Level Zero
+    - Elapsed time: 112.10 seconds
+  - Arc B580 12GB
+    - Elapsed time: 116.54 seconds
+  - RX 6950 XT ASRock Formula OC - ROCm 6.4.4 - Pytorch 2.8 - Factory
+    - Elapsed time: 123.05 seconds
+  - RTX 2080
+    - Elapsed time: 125.75 seconds
+  - RX 6950 XT ASRock Formula OC - ROCm 6.4.4 - Pytorch 2.8 - 2500mhz Core cap -50mv UV
+    - Elapsed time: 128.74 seconds
+  - RX 9070 XT Taichi - Preview Driver 25.20.01.14 Pytorch 2.8 in Windows 11
+    - Elapsed time: 146.54 seconds
+  - RX 9070 XT Taichi Ubuntu 24.04 - ROCm 6.4.4 - Pytorch 2.8
+  	- Elapsed time: 147.91 seconds
+- C Tier "Totally Useable"
+  - Arc A770 16GB - OneAPI 2025.2.1 - Pytorch 2.8 with IPEX optimization
+    - Elapsed time: 166.46 seconds
+  - Arc A770 16GB - OneAPI 2025.3.0 - Pytorch 2.8 with IPEX optimization
+    - Elapsed time: 167.92 seconds
+  - Arc A770 16GB (AMP Working WSL2)
+    - Elapsed time: 176.26 seconds
+  - Google Colab Tesla T4 16GB
+    - Elapsed time: 177.52 seconds
+  - Arc B580 12GB (No AMP)
+    - Elapsed time: 181.56 seconds
+  - Arc A770 16GB (No AMP)
+    - Elapsed time: 229.07 seconds
+- D Tier "Technically These Work"
+  - Nvidia Quadro GP100 16GB HBM2 - Cu126 Pytorch 2.9 - The ultimate in Pascal
+    - Elapsed time: 304.46 seconds
+  - Sapphire RX 9060 XT 16GB - Win11 Preview Driver 25.20.01.14
+    - Elapsed time: 317.38 seconds
+  - Titan Xp 12GB
+    - Elapsed time: 375.25 seconds
+  - Arc A380 Sparkle ELF 6GB - 43w max slot power w/ IPEX
+    - Elapsed time: 540.30 seconds
+  - Core Ultra 9 285H Laptop CPU Arc 140T iGPU Running on XPU w/ IPEX
+    - Elapsed time: 544.68 seconds
+  - PNY XLR8 GTX 1660 SUPER OC - No AMP
+    - Elapsed time: 590.51 seconds
+  - Core Ultra 9 285H Laptop CPU Arc 140T iGPU Running on XPU
+    - Elapsed time: 672.29 seconds
+  - Ryzen 9 AI 370 890M iGPU Running on ROCm 7.1 container (ROCm on Ryzen) 16GB Shared
+    - Elapsed time: 820.08 seconds
+- F Tier "Potato Performance"
+  - Ryzen 9 9950X 5.6ghz CO -30 All Core 65c limit 96GB DDR5 6000MHZ CL30 30 threads
+    - Elapsed time: 1154.54 seconds
+  - Ultra 155H Arc 16GB Total with 8GB Shared RAM (Laptop) XPU (No AMP)
+    - Elapsed time: 1457.17 seconds
+  - Ryzen AI MAX+ 395 CPU Only - Framework PC
+    - Elapsed time: 1949.26 seconds
+  - Ryzen 9 7945HX CO -20 All Core 96GB DDR5 5600MHZ SODIMM (Minisforum BD795i)
+  	- Elapsed time: 1999.15 seconds
+  - i9-14900K 5.4ghz all core locked 64GB 6800MHZ DDR5 20 threads
+    - Elapsed time: 2381.41 seconds
+  - Ryzen 9 AI 370 CPU Only 12 Threads AMP
+    - Elapsed time: 3088.70 seconds
+  - Core Ultra 265K - 16 threads - 125w PL1/PL2 - -80mv pcore -60mv / ecore 48x ecore (No AMP possible, only FP32 back-propagation)
+    - Elapsed time: 3728.71 seconds
+  - Ryzen 9 7945HX3D 100w - Minisforum BD790iX3D 30 threads
+    - Elapsed time: 4557.91 seconds
+  - Core Ultra 9 285H Laptop CPU Arc 140T iGPU Running on CPU (16 Threads)
+    - Elapsed time: 4856.63 seconds
