@@ -1,6 +1,5 @@
 # Pytorch BERT Benchmark Results
 
-### <a href="/benchmark/pytorch-bert-benchmark/BERT.md">BERT Benchmark</a>
 
 **NOTE** The code that runs this benchmark is old and does not actually produce anything but heat.
 
