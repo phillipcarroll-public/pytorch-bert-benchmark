@@ -15,6 +15,8 @@ Batch Size 5, 1 Epoch, 10 Iterations Mixed Precision, All ran in Windows 11 with
     - Elapsed time: 43.79 seconds
   - RTX 5080 - Stock ASUS Astral
     - Elapsed time: 44.83 seconds
+  - Arc B580 12GB - Ubuntu 24.04 - 2.8.10-xpu venv - Compiled
+    - Elapsed time: 48.63 seconds
   - RTX 5070 Ti - UV/OC 3.2ghz 990mv +1500mhz mem
     - Elapsed time: 50.52 seconds
   - RTX 5070 Ti - +1500mhz mem

@@ -385,6 +385,8 @@ model = BertForSequenceClassification.from_pretrained('bert-base-uncased', num_l
 
 # Move the model to the device
 model.to(device)
+# Compile model
+model = torch.compile(model) 
 
 # Dataset and DataLoader
 train_dir = os.path.join("data", "benchmark_dataset", "train")
