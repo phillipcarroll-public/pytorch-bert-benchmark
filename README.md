@@ -9,6 +9,10 @@ Batch Size 5, 1 Epoch, 10 Iterations Mixed Precision, All ran in Windows 11 with
 - S Tier "The Fastest"
   - AMD Instinct Mi325X VF 288GB - Ubuntu 24.04 ROCm 6.4.1
     - Elapsed time: 27.13 seconds
+  - Arc Pro B70 32GB - Ubuntu 25.10 - Pytorch 2.8 IPEX, Inductor Compiler - IPEX compiler not working
+    - Elacpsed time: 29.68
+  - Arc Pro B70 32GB - Ubuntu 25.10 - Pytorch 2.8 with IPEX optimization
+    - Elapsed time: 38.60 seconds
   - Radeon AI Pro R9700 32GB x 2 - Torch DDP / RCCL Backend - Ubuntu 24.04 - ROCm 7.2 Native
     - Elapsed time: 39.10 seconds
   - RTX 5080 - Stock PNY OC
