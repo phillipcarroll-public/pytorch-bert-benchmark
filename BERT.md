@@ -173,7 +173,7 @@ class JSONDataset(Dataset):
         text, label = self.data[idx]
 
         # Tokenize the text
-        encoding = self.tokenizer.encode_plus(
+        encoding = self.tokenizer(
             text,
             add_special_tokens=True,
             max_length=self.max_length,

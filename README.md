@@ -33,6 +33,8 @@ Batch Size 5, 1 Epoch, 10 Iterations Mixed Precision, All ran in Windows 11 with
     - Elapsed time: 55.48 seconds
   - Arc B580 12GB - Ubuntu 24.04 - 2.8.10-xpu venv
     - Elapsed time: 56.49 seconds
+  - Radeon AI Pro R9700 32GB - Garuda - Kernel 6.19 - ROCm 7.2
+    - Elapsed time: 57.48 seconds
   - RX 7900 XTX Sapphire Pulse - Ubuntu 24.04 LTS PyTorch 2.6 ROCm 6.4.2
     - Elapsed time: 57.62 seconds
   - RX 7900 XTX Asrock Taichi - Ubuntu 24.04 LTS PyTorch 2.6 ROCm 6.4.2
